@@ -6,66 +6,107 @@
 </head>
 <body>
     <h1>Account</h1>
-    <label for="username">Name:</label>
-    <br/>
+
+    <form action="/canvas/index.html">
+
+    <label for="full-name">Name:</label>
+    <div>
     <input
-            type="text"
-            id="username"
-            value="Jose Annunziato"
+            value="Alice Wonderland"
+            name="full-name"
+            id="full-name"
+            style="width: 100%"
+            title="Please type your first and last name"
             placeholder="John Doe"
-            title="Please enter your name"/>
+            type="text"
+    />
+    </div>
+
     <br/>
-    <label for="bio">Bio:</label>
+
+    <label for="email">Email:</label><br/>
+    <input
+            value="alice@wonderland.com"
+            id="email"
+            placeholder="alice@wonderland.com"
+            type="email"
+    />
+
     <br/>
+    <br/>
+
+    Password:<br/>
+    <input type="password"/>
+
+    <br/>
+    <br/>
+
+    Date of Birth:<br/>
+    <input value="1984-01-23" max="1984-01-27" min="1984-01-10" type="date"/>
+
+    <br/><br/>
+    Salary:<br/>
+    <input value="100000" type="number" min="100" max="1000000"/>
+
+    <br/><br/>
+    Biography:<br/>
     <textarea
-            placeholder="I like to ski and play Lego"
-            id="bio"
+            cols="40"
             rows="10"
-            cols="40">Northeastern professor. Teaching WebDev</textarea>
+            placeholder="Tell us about yourself">Here is where you put the text that you want to edit</textarea>
+
+    <br/><br/>
+    Tenured:<br/>
+    <input
+            id="tenured-yes"
+            name="tenured"
+            type="radio"
+    />
+    <label for="tenured-yes" for="tenured-yes">
+        Yes - Select if you are tenured
+    </label>
     <br/>
-    <label>Married:</label>
-    <br/>
-    <input id="married-yes" type="radio" name="married"/>
-    <label for="married-yes">Yes</label>
+
 
     <label>
-    <input type="radio" name="married"/>No
+    <input
+            checked
+            name="tenured"
+            type="radio"
+    />
+    No - Select if you are not tenured
     </label>
 
     <br/>
-    <label>Marital Status</label>
     <br/>
-    <select>
-        <option value="MARRIED">Married</option>
-        <option value="SINGLE">Single</option>
-        <option value="WIDOW">Widow</option>
+    Marital Status:
+    <input name="married" type="radio"/> Married
+    <input name="married" type="radio"/> Single
+    <input name="married" type="radio"/> Widowed
+    <br/>
+    <br/>
+    Courses Teaching:<br/>
+    <input name="courses" type="checkbox" value="CS4550" checked/>CS4550<br/>
+    <input name="courses" type="checkbox" value="CS5610" checked/>CS5610<br/>
+    <input name="courses" type="checkbox" value="CS5500"/>CS5500<br/>
+    <input name="courses" type="checkbox" value="CS5200"/>CS5200
+    <br/>
+    <br/>
+    Favorite Books:<br/>
+    <input name="books" type="checkbox" value="DUNE"/>Dune<br/>
+    <input name="books" type="checkbox" value="LOTR" checked/>LOTR<br/>
+    <input name="books" type="checkbox" value="1984"/>1984<br/>
+    <input name="books" type="checkbox" value="HITCH" checked/>Hitchhikers Guide to the Galaxy<br/>
+    <br/>
+    Favorite Movie Genre:<br/>
+    <select value="COMEDY">
+        <option value="DRAMA">Drama</option>
+        <option value="SCIFI">SciFi</option>
+        <option value="COMEDY" selected>Comedy</option>
+        <option value="HORROR">Horror</option>
     </select>
-
-    <br/>
-    <label>Courses Teaching This Semester</label>
-    <label><input type="checkbox">CS4550</label><br/>
-    <label><input type="checkbox">CS5610</label><br/>
-    <label><input type="checkbox">CS5200</label><br/>
-    <label><input type="checkbox">CS3200</label><br/>
-    <label><input type="checkbox">CS5500</label>
-
-
-    <br/>
-    <label>Email</label>
-    <input type="email"/>
-    <br/>
-    <label>Years teaching</label>
-    <input type="number" min="100" max="1000"/>
-    <br/>
-    <label>Phone</label>
-    <input type="tel"/>
-    <br/>
-    <label>Date of Birth</label>
-    <input type="date" value="2023-01-17"
-           max="2023-01-23"
-           min="2023-01-10"/>
-    <br/>
-    <button>Submit</button>
-    <button>Cancel</button>
+        <br/>
+        <button>Submit</button>
+    </form>
 </body>
 </html>
