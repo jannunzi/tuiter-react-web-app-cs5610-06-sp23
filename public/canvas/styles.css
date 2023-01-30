@@ -1,0 +1,39 @@
+h1 {
+  font-size: 2em;
+  color: #61dafb;
+  background-color: green;
+}
+
+.highlighted-text {
+  background-color: lightgreen;
+  color: blue;
+  font-weight: bold;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-primary {
+
+}
+
+.bg-secondary {
+
+}
+
+.bg-danger {
+
+}
+
+.bg-success {
+
+}
+
+.fg-purple {
+  color: purple;
+}
+
+.txt-lg {
+  font-size: 2em;
+}

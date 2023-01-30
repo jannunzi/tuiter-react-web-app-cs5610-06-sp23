@@ -1,0 +1,41 @@
+#focus-pg {
+  background-color: lightgreen;
+  color: red;
+}
+
+h1 {
+  background-color: blue;
+}
+
+h2 {
+  background-color: purple;
+  color: white;
+}
+
+#goals {
+  background-color: green;
+  /*border-width: 20px;*/
+  /*border-color: blue;*/
+  /*border-style: ridge;*/
+  border: 30px blue dotted;
+  border-bottom: 40px red ridge;
+  border-top-width: 20px;
+  border-top-color: purple;
+  border-top-style: dashed;
+
+  margin: 30px;
+  margin-top: 20px;
+  margin-left: 50px;
+
+  padding: 10px;
+  padding-right: 40px;
+}
+
+p {
+  background-color: green;
+}
+
+p {
+  background-color: #001180;
+  color: yellow;
+}
