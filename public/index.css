@@ -1,0 +1,13 @@
+#welcome-title {
+  font-size: 2em;
+  color: blue;
+  background-color: yellow;
+}
+
+.font-size-2em {
+  font-size: 2em;
+}
+
+.color-blue {
+  color: red;
+}

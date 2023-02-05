@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Account</h1>
+
+    <form action="/tarp/index.html">
+
+        <label for="full-name">Name:</label>
+        <input
+                class="form-control"
+                value="Alice Wonderland"
+                name="full-name"
+                id="full-name"
+                title="Please type your first and last name"
+                placeholder="John Doe"
+                type="text"
+        />
+
+        <br/>
+
+        <label for="email">Email:</label>
+        <input
+                disabled
+                class="form-control"
+                value="alice@wonderland.com"
+                id="email"
+                placeholder="alice@wonderland.com"
+                type="email"
+        />
+
+        <br/>
+        <br/>
+
+        Password:<br/>
+        <input class="form-control"
+               type="password"/>
+
+        <br/>
+        <br/>
+
+        Date of Birth:<br/>
+        <input class="form-control"
+               value="1984-01-23" max="1984-01-27" min="1984-01-10" type="date"/>
+
+        <br/><br/>
+        Salary:<br/>
+        <input class="form-control"
+               value="100000" type="number" min="100" max="1000000"/>
+
+        <br/><br/>
+        Biography:<br/>
+        <textarea
+                class="form-control"
+                placeholder="Tell us about yourself">Here is where you put the text that you want to edit</textarea>
+
+        <br/><br/>
+        Tenured:<br/>
+        <input
+                id="tenured-yes"
+                name="tenured"
+                type="radio"
+        />
+        <label for="tenured-yes" for="tenured-yes">
+            Yes - Select if you are tenured
+        </label>
+        <br/>
+
+
+        <label>
+            <input
+                    checked
+                    name="tenured"
+                    type="radio"
+            />
+            No - Select if you are not tenured
+        </label>
+
+        <br/>
+        <br/>
+        Marital Status:
+        <input name="married" type="radio"/> Married
+        <input name="married" type="radio"/> Single
+        <input name="married" type="radio"/> Widowed
+        <br/>
+        <br/>
+        Courses Teaching:<br/>
+        <input name="courses" type="checkbox" value="CS4550" checked/>CS4550<br/>
+        <input name="courses" type="checkbox" value="CS5610" checked/>CS5610<br/>
+        <input name="courses" type="checkbox" value="CS5500"/>CS5500<br/>
+        <input name="courses" type="checkbox" value="CS5200"/>CS5200
+        <br/>
+        <br/>
+        Favorite Books:<br/>
+        <input name="books" type="checkbox" value="DUNE"/>Dune<br/>
+        <input name="books" type="checkbox" value="LOTR" checked/>LOTR<br/>
+        <input name="books" type="checkbox" value="1984"/>1984<br/>
+        <input name="books" type="checkbox" value="HITCH" checked/>Hitchhikers Guide to the Galaxy<br/>
+        <br/>
+        Favorite Movie Genre:<br/>
+        <select value="COMEDY">
+            <option value="DRAMA">Drama</option>
+            <option value="SCIFI">SciFi</option>
+            <option value="COMEDY" selected>Comedy</option>
+            <option value="HORROR">Horror</option>
+        </select>
+        <br/>
+
+        <h3>Switches</h3>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+            <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+            <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+        </div>
+
+
+        <h3>Responsive Forms</h3>
+
+
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3">
+            </div>
+        </div>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        First radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                        Second radio
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                    <label class="form-check-label" for="gridRadios3">
+                        Third disabled radio
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary mb-3">Submit</button>
+            <button type="button" class="btn btn-danger mb-3">Cancel</button>
+            <button type="button" class="btn btn-warning mb-3">Warning</button>
+            <button type="button" class="btn btn-success">Success</button>
+    </form>
+</div>
+
+</body>
+</html>
