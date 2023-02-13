@@ -1,4 +1,4 @@
-function Modules() {
+export default function Modules() {
   return(`
     <ul class="list-group mb-4">
       <li class="list-group-item list-group-item-primary">Resources</li>
@@ -38,3 +38,4 @@ function Modules() {
   </ul>
   `)
 }
+// export default Modules

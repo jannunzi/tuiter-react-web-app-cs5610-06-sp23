@@ -7,3 +7,4 @@ function Sidebar() {
     </ul>
   `)
 }
+export default Sidebar
