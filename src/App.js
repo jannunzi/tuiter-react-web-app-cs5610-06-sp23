@@ -1,44 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import HouseScreen from "./screens/house-screen";
+import AddScreen from "./screens/add-screen";
+import TodosScreen from "./screens/todos-screen";
+import DestructorScreen from "./screens/destructor-screen";
+import {BrowserRouter} from "react-router-dom";
+import {Route, Routes} from "react-router";
+import NavBar from "./components/nav-bar";
+import Tarp from "./tarp";
 
 function App() {
-  const a = 123
-  const b = 234
-  let c = a + b
-  const d = [a, b, c]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to Web Dev CS5610 Section 6.
-        </p>
-        <p>
-          a = {a}
-          <br/>
-          b = {b}
-        <br/>
-          c = {c}
-          <br/>
-          d = {d}
-          <ul>
-            <li>{d[0]}</li>
-            <li>{d[1]}</li>
-            <li>{d[2]}</li>
-          </ul>
-          <ol>
-            {d.map(item => <li>{item}</li>)}
-          </ol>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid mt-4">
+      <BrowserRouter>
+        <div className="row">
+          <div className="col-1">
+            <NavBar/>
+          </div>
+          <div className="col-11">
+            <Routes>
+              <Route path="/tarp/*" element={<Tarp/>}/>
+              <Route path="/destructors" element={<DestructorScreen/>}/>
+              <Route path="/add/:paramA/:paramB" element={<AddScreen/>}/>
+              <Route path="/house" element={<HouseScreen/>}/>
+              <Route path="/todos" element={<TodosScreen/>}/>
+            </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
