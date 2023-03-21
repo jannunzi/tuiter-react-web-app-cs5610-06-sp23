@@ -1,20 +1,20 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-export default function NavBar () {
-  return(
-    <div className="list-group">
-      <Link to="/tarp" className="list-group-item">
-        Tarp
-      </Link>
-      <Link to="/add" className="list-group-item">
-        Add
-      </Link>
-      <Link to="/todos" className="list-group-item">
-        Todos
-      </Link>
-      <Link to="/house" className="list-group-item">
-        House
-      </Link>
+export default function NavBar() {
+  const { currentUser } = useSelector((state) => state.users);
+  return (
+    <div>
+      <Link to="/admin">Admin</Link>|<Link to="/">Home</Link>|
+      <Link to="/tarp">Tarp</Link>|<Link to="/add">Add </Link>|
+      <Link to="/todos">Todos</Link>|<Link to="/house">House</Link>|
+      <Link to="/tuits">Tuits</Link>|
+      {!currentUser && (
+        <>
+          <Link to="/login">Login</Link>|<Link to="/register">Register</Link>|
+        </>
+      )}
+      {currentUser && <Link to="/profile">Profile</Link>}
     </div>
-  )
+  );
 }
