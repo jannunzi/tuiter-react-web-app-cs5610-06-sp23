@@ -16,8 +16,8 @@ export const findTuitByIdThunk = createAsyncThunk();
 export const createTuitThunk = createAsyncThunk(
   "tuits/create",
   async (tuit) => {
-    await createTuit(tuit);
-    return tuit;
+    const newTuit = await createTuit(tuit);
+    return newTuit;
   }
 );
 

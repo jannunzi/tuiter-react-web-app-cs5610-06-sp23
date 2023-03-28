@@ -45,10 +45,10 @@ function TuitList() {
       ></textarea>
       <ul className="list-group mt-2">
         {tuits.map((tuit) => (
-          <li key={tuit.id} className="list-group-item">
+          <li key={tuit._id} className="list-group-item">
             <button
               className="btn btn-danger float-end ms-2"
-              onClick={() => dispatch(deleteTuitThunk(tuit.id))}
+              onClick={() => dispatch(deleteTuitThunk(tuit._id))}
             >
               Delete
             </button>

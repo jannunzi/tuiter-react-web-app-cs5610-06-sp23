@@ -11,11 +11,13 @@ export const findAllTuits2 = () => {
 };
 
 export const findTuitById = (id) => {};
-export const createTuit = (tuit) => {
-  return axios.post(TUITER_API_URL, tuit);
+export const createTuit = async (tuit) => {
+  const response = await axios.post(TUITER_API_URL, tuit);
+  const newTuit = response.data;
+  return newTuit;
 };
 export const updateTuit = (newTuit) => {
-  return axios.put(`${TUITER_API_URL}/${newTuit.id}`, newTuit);
+  return axios.put(`${TUITER_API_URL}/${newTuit._id}`, newTuit);
 };
 
 export const deleteTuit = (id) => {

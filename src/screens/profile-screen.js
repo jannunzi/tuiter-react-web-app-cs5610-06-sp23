@@ -16,8 +16,7 @@ function ProfileScreen() {
       <div>
         {currentUser && (
           <div>
-            <h2>Welcome {currentUser.firstName}</h2>
-            <h2>{currentUser.lastName}</h2>
+            <h2>Welcome {currentUser.username}</h2>
           </div>
         )}
       </div>

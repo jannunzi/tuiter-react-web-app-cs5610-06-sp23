@@ -13,6 +13,7 @@ import Home from "./screens/home";
 import LoginScreen from "./screens/login-screen";
 import ProfileScreen from "./screens/profile-screen";
 import AdminScreen from "./screens/admin-screen";
+import RegisterScreen from "./screens/register-screen";
 function App() {
   return (
     <Provider store={store}>
@@ -23,6 +24,7 @@ function App() {
             <Route path="/admin" element={<AdminScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/login" element={<LoginScreen />} />
+            <Route path="/register" element={<RegisterScreen />} />
             <Route path="/" element={<Home />} />
             <Route path="/tuits" element={<TuitList />} />
             <Route path="/tarp/*" element={<Tarp />} />

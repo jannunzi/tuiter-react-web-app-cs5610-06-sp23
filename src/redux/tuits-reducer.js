@@ -19,14 +19,14 @@ const tuitsSlice = createSlice({
   extraReducers: {
     [updateTuitThunk.fulfilled]: (state, action) => {
       state.tuits = state.tuits.map((tuit) =>
-        tuit.id === action.payload.id ? action.payload : tuit
+        tuit._id === action.payload._id ? action.payload : tuit
       );
     },
     [createTuitThunk.fulfilled]: (state, action) => {
       state.tuits.push(action.payload);
     },
     [deleteTuitThunk.fulfilled]: (state, action) => {
-      state.tuits = state.tuits.filter((tuit) => tuit.id !== action.payload);
+      state.tuits = state.tuits.filter((tuit) => tuit._id !== action.payload);
     },
     [findAllTuitsThunk.pending]: (state, action) => {
       state.loading = true;
