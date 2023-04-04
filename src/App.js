@@ -14,6 +14,10 @@ import LoginScreen from "./screens/login-screen";
 import ProfileScreen from "./screens/profile-screen";
 import AdminScreen from "./screens/admin-screen";
 import RegisterScreen from "./screens/register-screen";
+import NapsterScreen from "./napster";
+import NapsterSearchScreen from "./napster/napster-search";
+import NapsterAlbumDetailsScreen from "./napster/napster-album";
+import NapsterTrackDetailsScreen from "./napster/napster-track";
 function App() {
   return (
     <Provider store={store}>
@@ -21,6 +25,20 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
+            <Route
+              path="/napster/track/:id"
+              element={<NapsterTrackDetailsScreen />}
+            />
+            <Route
+              path="/napster/album/:id"
+              element={<NapsterAlbumDetailsScreen />}
+            />
+            <Route path="/napster/search" element={<NapsterSearchScreen />} />
+            <Route
+              path="/napster/search/:searchTerm"
+              element={<NapsterSearchScreen />}
+            />
+            <Route path="/napster" element={<NapsterScreen />} />
             <Route path="/admin" element={<AdminScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/login" element={<LoginScreen />} />

@@ -8,7 +8,7 @@ export default function NavBar() {
       <Link to="/admin">Admin</Link>|<Link to="/">Home</Link>|
       <Link to="/tarp">Tarp</Link>|<Link to="/add">Add </Link>|
       <Link to="/todos">Todos</Link>|<Link to="/house">House</Link>|
-      <Link to="/tuits">Tuits</Link>|
+      <Link to="/tuits">Tuits</Link>|<Link to="/napster">Napster</Link>|
       {!currentUser && (
         <>
           <Link to="/login">Login</Link>|<Link to="/register">Register</Link>|
