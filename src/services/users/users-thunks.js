@@ -21,7 +21,7 @@ export const createUserThunk = createAsyncThunk(
     return response.data;
   }
 );
-
+// updateProfileThunk
 export const updateUserThunk = createAsyncThunk(
   "users/update",
   async (user) => {

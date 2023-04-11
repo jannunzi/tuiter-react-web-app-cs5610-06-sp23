@@ -9,3 +9,8 @@ export const userLikesAlbum = async (userId, albumId) => {
   );
   return response.data;
 };
+
+export const findLikesByUserId = async (userId) => {
+  const response = await axios.get(`${USERS_API}/${userId}/likes`);
+  return response.data;
+};

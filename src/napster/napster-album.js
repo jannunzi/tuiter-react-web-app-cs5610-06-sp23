@@ -27,13 +27,17 @@ function NapsterAlbumDetailsScreen() {
   return (
     <div>
       <h1>{album.name}</h1>
-      <h2>{currentUser.username}</h2>
+      <h2>{currentUser && currentUser.username}</h2>
       <h2>Artist: {album.artistName}</h2>
       <h2>Release Date: {album.released}</h2>
-      <button onClick={likeAlbum} className="btn btn-success">
-        Like
-      </button>
-      <button className="btn btn-danger">Unlike</button>
+      {currentUser && (
+        <>
+          <button onClick={likeAlbum} className="btn btn-success">
+            Like
+          </button>
+          <button className="btn btn-danger">Unlike</button>
+        </>
+      )}
       <br />
       <img
         src={`https://api.napster.com/imageserver/v2/albums/${id}/images/300x300.jpg`}
